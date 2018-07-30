@@ -8,9 +8,11 @@ using UnityEngine;
 
 namespace Shooter.ECSwithJobs
 {
+
+    /*
     public class MovementSystem : JobComponentSystem 
 	{
-        [ComputeJobOptimization]
+        [BurstCompile]
         struct MovementJob : IJobProcessComponentData<Position, Rotation, MoveSpeed>
         {
             public float topBound;
@@ -21,7 +23,7 @@ namespace Shooter.ECSwithJobs
             {
                 float3 value = position.Value;
 
-                value += deltaTime * speed.Value * math.forward(rotation.Value);
+                value += deltaTime * speed.speed * math.forward(rotation.Value);
 
                 if (value.z < bottomBound)
                     value.z = topBound;
@@ -44,4 +46,5 @@ namespace Shooter.ECSwithJobs
             return moveHandle;
         }
     }
+    */
 }
